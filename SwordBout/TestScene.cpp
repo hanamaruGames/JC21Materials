@@ -1,5 +1,6 @@
 #include "TestScene.h"
 #include "ImGui/imgui.h"
+#include "Engine/SceneManager.h"
 
 //コンストラクタ
 TestScene::TestScene(GameObject * parent)
@@ -15,6 +16,7 @@ void TestScene::Initialize()
 //更新
 void TestScene::Update()
 {
+	SceneManager::Instance()->ChangeScene(SceneManager::SCENE_ID::SCENE_ID_TITLE);
 }
 
 //描画
